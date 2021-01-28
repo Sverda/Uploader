@@ -19,7 +19,7 @@ namespace Web.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public int Get()
         {
             throw new NotImplementedException();
         }
