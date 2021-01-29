@@ -43,7 +43,7 @@ export class UploadStateContainer extends Component {
   setUploadInProgressState(percentageDone) {
     this.setState({
       current: <UploadInProgressState
-        inProgress={percentageDone}
+        inProgressValue={percentageDone}
         cancelState={this.setChooseFileState}
       />
     });
