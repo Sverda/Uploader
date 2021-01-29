@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace Web.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UploadController : ControllerBase
     {
         private readonly ILogger<UploadController> _logger;
@@ -20,6 +20,12 @@ namespace Web.Controllers
 
         [HttpGet]
         public int Get()
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        public int Post()
         {
             throw new NotImplementedException();
         }
