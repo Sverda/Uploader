@@ -21,6 +21,7 @@ class ChooseFileState extends Component {
                     <p>Select file which you may want to put into cloud...</p>
                     <ChooseFileButton
                         successState={this.props.successState}
+                        inProgressState={this.props.inProgressState}
                         errorState={this.props.errorState}
                     />
                 </div>
