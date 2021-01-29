@@ -20,10 +20,11 @@ class ChooseFileButton extends Component {
     }
 
     handleChoosenFile = (e) => {
-        let image_as_files = e.target.files[0];
+        let image_as_files = e.target.files;
         if (image_as_files !== null) {
 
             let formData = new FormData();
+            formData.append('file', image_as_files[0])
 
             axios.post(
                 this.custom_file_upload_url,
@@ -32,6 +33,10 @@ class ChooseFileButton extends Component {
                     headers: {
                         "Content-type": "multipart/form-data",
                     },
+                    onUploadProgress: function (progressEvent) {
+                        var percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                        console.log(percentCompleted);
+                    }
                 }
             )
             .then(res => {

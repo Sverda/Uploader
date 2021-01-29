@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,16 +21,24 @@ namespace Web.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public int Get()
-        {
-            throw new NotImplementedException();
-        }
-
         [HttpPost]
-        public int Post()
+        public async Task<IActionResult> UploadFile()
         {
-            throw new NotImplementedException();
+            IFormFileCollection files = Request.Form.Files;
+            var size = files.Sum(f => f.Length);
+            foreach (var formFile in files)
+            {
+                if (formFile.Length <= 0)
+                {
+                    continue;
+                }
+
+                var filePath = Path.GetTempFileName();
+                using var stream = System.IO.File.Create(filePath);
+                await formFile.CopyToAsync(stream);
+            }
+
+            return Ok(new { count = files.Count, size });
         }
     }
 }

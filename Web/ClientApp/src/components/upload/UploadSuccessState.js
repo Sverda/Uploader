@@ -17,7 +17,20 @@ class UploadSuccessState extends Component {
                 </div>
                 <div className='block-container'>
                     <h1>Success</h1>
-                    <p></p>
+                    <p>Your file was succesfully uploaded. You can copy the link to your clipboard. </p>
+                    <div className='button-group'>
+                        <button
+                            className='btn btn-primary'
+                        >
+                            Copy Link
+                        </button>
+                        <button
+                            className='btn btn-primary'
+                            onClick={this.props.returnState}
+                        >
+                            Done
+                        </button>
+                    </div>
                 </div>
             </div>
         );
