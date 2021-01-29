@@ -11,6 +11,12 @@
     border-color: #242a44;
 }
 
+.upload-button:active {
+    color: #fff;
+    background-color: #242a44;
+    border-color: #242a44;
+}
+
 .upload-button::-webkit-file-upload-button {
     visibility: hidden;
 }
@@ -19,16 +25,15 @@
     content: 'Choose File';
     display: inline-block;
     padding: 6px;
+    background-color: transparent;
 }
 
 .upload-button:hover::before {
     color: #fff;
-    background-color: #2E324A;
-    border-color: #2E324A;
+    background-color: transparent;
 }
 
 .upload-button:active::before {
     color: #fff;
-    background-color: #2E324A;
-    border-color: #2E324A;
+    background-color: transparent;
 }

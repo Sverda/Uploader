@@ -13,7 +13,7 @@ class ChooseFileButton extends Component {
                 <input
                     type="file"
                     className="btn btn-primary upload-button"
-                    onClick={this.handleChoosenFile}
+                    onChange={this.handleChoosenFile}
                 />
             </div>
         );

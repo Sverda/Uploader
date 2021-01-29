@@ -9,3 +9,15 @@ html, body {
     background-color: #2E324A;
     border-color: #2E324A;
 }
+
+.btn:hover {
+    color: #fff;
+    background-color: #242a44;
+    border-color: #242a44;
+}
+
+.btn:active {
+    color: #fff;
+    background-color: #242a44;
+    border-color: #242a44;
+}
