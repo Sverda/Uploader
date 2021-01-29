@@ -3,7 +3,7 @@ h1 {
     font-size: 1.4em;
 }
 
-span {
+span, p {
     color: rgba(255, 255, 255, 0.65);
     font-size: 1em;
 }
@@ -13,6 +13,10 @@ span {
     display: flex;
 }
 
+#upload-container p {
+    line-height: 0.95;
+}
+
 .block-container {
     display: block;
 }
@@ -20,22 +24,6 @@ span {
 .upload-icon {
     margin: 25px;
     position: relative;
-    top: -17px;
+    top: -20px;
     align-self: center;
-}
-
-.upload-button {
-    margin-top: 30px;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #2E324A;
-  border-color: #2E324A;
-}
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: #242a44;
-  border-color: #242a44;
 }

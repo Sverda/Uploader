@@ -3,3 +3,9 @@ html, body {
   width: 100vw;
   background-color: #1B1C2B;
 }
+
+.btn {
+    color: #fff;
+    background-color: #2E324A;
+    border-color: #2E324A;
+}
