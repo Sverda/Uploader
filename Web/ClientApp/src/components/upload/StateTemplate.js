@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
-import '../../styles/StateTemplates.css';
-
 class StateTemplate extends Component {
 
     render() {
         return (
-            <Container id='template' className='d-flex-col'>
+            <Container>
                 <Row>
                     <Col className='col-1'></Col>
                     <Col className='col-11'>
@@ -15,9 +13,11 @@ class StateTemplate extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='col-1'><div>{this.props.icon}</div></Col>
+                    <Col className='col-1 d-flex align-items-baseline justify-content-center'>
+                        {this.props.icon}
+                    </Col>
                     <Col className='col-11'>
-                        <p className='align-middle'>{this.props.text}</p>
+                        <p className='p-1'>{this.props.text}</p>
                     </Col>
                 </Row>
                 <Row>

@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBug } from '@fortawesome/free-solid-svg-icons'
 import StateTemplate from './StateTemplate';
 
-import '../../styles/UploadErrorState.css';
-
 class UploadErrorState extends Component {
     static gradientColor = '255, 0, 0';
 
@@ -19,14 +17,14 @@ class UploadErrorState extends Component {
                 header={'We are sorry!'}
                 text={'There was an error and your file could not be uploaded. Would you like to try again?'}
                 buttonsGroup={
-                    <div className='button-group'>
+                    <div>
                         <button
                             className='btn btn-primary'
                         >
                             Retry
                         </button>
                         <button
-                            className='btn btn-primary'
+                            className='btn btn-primary ml-3'
                             onClick={this.props.returnState}
                         >
                             Cancel

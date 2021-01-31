@@ -18,14 +18,14 @@ class UploadSuccessState extends Component {
                 header={'Success'}
                 text={'Your file was succesfully uploaded. You can copy the link to your clipboard. '}
                 buttonsGroup={
-                    <div className='button-group'>
+                    <div>
                         <button
                             className='btn btn-primary'
                         >
                             Copy Link
                         </button>
                         <button
-                            className='btn btn-primary'
+                            className='btn btn-primary ml-3'
                             onClick={this.props.returnState}
                         >
                             Done
