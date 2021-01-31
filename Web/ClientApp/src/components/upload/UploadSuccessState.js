@@ -4,10 +4,11 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 
 class UploadSuccessState extends Component {
+    static gradientColor = '0, 255, 0';
 
     render() {
         return (
-            <div id='upload-container'>
+            <div>
                 <div className='d-flex'>
                     <FontAwesomeIcon
                         className='upload-icon'

@@ -8,12 +8,12 @@ span, p {
     font-size: 1em;
 }
 
-#upload-container {
-    margin-top: 15vh;
+div.upload-container > div {
+    padding-top: 15vh;
     display: flex;
 }
 
-#upload-container p {
+div.upload-container p {
     line-height: 0.95;
 }
 

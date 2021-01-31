@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
 
 class UploadInProgressState extends Component {
+    static gradientColor = '0, 0, 255';
 
     render() {
         return (
-            <div id='upload-container'>
+            <div>
                 <div className='d-flex'>
                     <FontAwesomeIcon
                         className='upload-icon'

@@ -5,10 +5,11 @@ import { faBug } from '@fortawesome/free-solid-svg-icons'
 import '../../styles/UploadErrorState.css';
 
 class UploadErrorState extends Component {
+    static gradientColor = '255, 0, 0';
 
     render() {
         return (
-            <div id='upload-container'>
+            <div>
                 <div className='d-flex'>
                     <FontAwesomeIcon
                         className='upload-icon'

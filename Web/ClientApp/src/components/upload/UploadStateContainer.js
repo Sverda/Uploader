@@ -22,12 +22,23 @@ export class UploadStateContainer extends Component {
         successState={this.setUploadSuccessState}
         inProgressState={this.setUploadInProgressState}
         errorState={this.setUploadErrorState}
-      />
+      />,
+      gradientColor: ChooseFileState.gradientColor
     };
   }
 
   render() {
-    return this.state.current;
+    return (
+      <div
+        className='upload-container'
+        style={
+          { background: 'rgb(27,28,43)' },
+          { background: `linear-gradient(35deg, rgba(27,28,43,1) 0%, rgba(27,28,43,1) 64%, rgba(${this.state.gradientColor}, 0.5) 100%)` }
+        }
+      >
+        {this.state.current}
+      </div>
+    );
   }
 
   setChooseFileState() {
@@ -36,7 +47,8 @@ export class UploadStateContainer extends Component {
         successState={this.setUploadSuccessState}
         inProgressState={this.setUploadInProgressState}
         errorState={this.setUploadErrorState}
-      />
+      />,
+      gradientColor: ChooseFileState.gradientColor
     });
   }
 
@@ -45,7 +57,8 @@ export class UploadStateContainer extends Component {
       current: <UploadInProgressState
         inProgressValue={percentageDone}
         cancelState={this.setChooseFileState}
-      />
+      />,
+      gradientColor: UploadInProgressState.gradientColor
     });
   }
 
@@ -53,7 +66,8 @@ export class UploadStateContainer extends Component {
     this.setState({
       current: <UploadErrorState
         returnState={this.setChooseFileState}
-      />
+      />,
+      gradientColor: UploadErrorState.gradientColor
     });
   }
 
@@ -61,7 +75,8 @@ export class UploadStateContainer extends Component {
     this.setState({
       current: <UploadSuccessState
         returnState={this.setChooseFileState}
-      />
+      />,
+      gradientColor: UploadSuccessState.gradientColor
     });
   }
 }

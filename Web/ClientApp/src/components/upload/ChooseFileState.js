@@ -5,10 +5,11 @@ import ChooseFileButton from './ChooseFileButton';
 
 
 class ChooseFileState extends Component {
+    static gradientColor = '255, 255, 255';
 
     render() {
         return (
-            <div id='upload-container'>
+            <div>
                 <div className='d-flex'>
                     <FontAwesomeIcon
                         className='upload-icon'
