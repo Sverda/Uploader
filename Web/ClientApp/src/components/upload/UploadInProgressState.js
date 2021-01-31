@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
+import StateTemplate from './StateTemplate';
 
 class UploadInProgressState extends Component {
     static gradientColor = '0, 0, 255';
 
     render() {
         return (
-            <div>
-                <div className='d-flex'>
-                    <FontAwesomeIcon
-                        className='upload-icon'
-                        icon={faArrowCircleUp}
-                        size='lg'
-                        color='blue' />
-                </div>
-                <div className='block-container'>
-                    <h1>Just a minute...</h1>
-                    <p>Your file is uploading right now. Just give us a second to finish your upload. </p>
+            <StateTemplate
+                icon={<FontAwesomeIcon
+                    className='upload-icon'
+                    icon={faArrowCircleUp}
+                    size='lg'
+                    color='blue' />}
+                header={'Just a minute...'}
+                text={'Your file is uploading right now. Just give us a second to finish your upload. '}
+                buttonsGroup={
                     <div className='progress-group'>
                         <div className='d-inline-block w-50 ml-4 mr-4'>
                             <div className="progress">
@@ -37,8 +36,8 @@ class UploadInProgressState extends Component {
                             Cancel
                         </button>
                     </div>
-                </div>
-            </div>
+                }
+            />
         );
     }
 }

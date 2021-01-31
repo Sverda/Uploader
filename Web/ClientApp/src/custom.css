@@ -4,6 +4,13 @@ html, body {
   background-color: #1B1C2B;
 }
 
+div.container, 
+div.row, 
+div.col {
+    padding: 0;
+    margin: 0;
+}
+
 .btn {
     color: #fff;
     background-color: #2E324A;

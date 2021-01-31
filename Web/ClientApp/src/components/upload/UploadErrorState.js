@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBug } from '@fortawesome/free-solid-svg-icons'
+import StateTemplate from './StateTemplate';
 
 import '../../styles/UploadErrorState.css';
 
@@ -9,17 +10,15 @@ class UploadErrorState extends Component {
 
     render() {
         return (
-            <div>
-                <div className='d-flex'>
-                    <FontAwesomeIcon
+            <StateTemplate 
+                icon={<FontAwesomeIcon
                         className='upload-icon'
                         icon={faBug}
                         size='lg'
-                        color='red' />
-                </div>
-                <div className='block-container'>
-                    <h1>We are sorry!</h1>
-                    <p>There was an error and your file could not be uploaded. Would you like to try again?</p>
+                        color='red' />}
+                header={'We are sorry!'}
+                text={'There was an error and your file could not be uploaded. Would you like to try again?'}
+                buttonsGroup={
                     <div className='button-group'>
                         <button
                             className='btn btn-primary'
@@ -33,8 +32,8 @@ class UploadErrorState extends Component {
                             Cancel
                         </button>
                     </div>
-                </div>
-            </div>
+                }
+            />
         );
     }
 }

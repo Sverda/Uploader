@@ -8,8 +8,8 @@ export class Layout extends Component {
     return (
       <div>
         <Container>
-          <Row className='align-items-center justify-content-center'>
-            <Col className='col-sm col-lg-6'>
+          <Row>
+            <Col id='scene' className='col-sm col-lg-6'>
               {this.props.children}
             </Col>
           </Row>

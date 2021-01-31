@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import StateTemplate from './StateTemplate';
 
 
 class UploadSuccessState extends Component {
@@ -8,17 +9,15 @@ class UploadSuccessState extends Component {
 
     render() {
         return (
-            <div>
-                <div className='d-flex'>
-                    <FontAwesomeIcon
+            <StateTemplate 
+                icon={<FontAwesomeIcon
                         className='upload-icon'
                         icon={faCheckCircle}
                         size='lg'
-                        color='green' />
-                </div>
-                <div className='block-container'>
-                    <h1>Success</h1>
-                    <p>Your file was succesfully uploaded. You can copy the link to your clipboard. </p>
+                        color='green' />}
+                header={'Success'}
+                text={'Your file was succesfully uploaded. You can copy the link to your clipboard. '}
+                buttonsGroup={
                     <div className='button-group'>
                         <button
                             className='btn btn-primary'
@@ -32,8 +31,8 @@ class UploadSuccessState extends Component {
                             Done
                         </button>
                     </div>
-                </div>
-            </div>
+                }
+            />
         );
     }
 }

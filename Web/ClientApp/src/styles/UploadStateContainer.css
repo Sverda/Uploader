@@ -8,22 +8,6 @@ span, p {
     font-size: 1em;
 }
 
-div.upload-container > div {
-    padding-top: 15vh;
-    display: flex;
-}
-
 div.upload-container p {
     line-height: 0.95;
-}
-
-.block-container {
-    display: block;
-}
-
-.upload-icon {
-    margin: 25px;
-    position: relative;
-    top: -20px;
-    align-self: center;
 }
