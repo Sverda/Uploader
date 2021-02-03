@@ -29,16 +29,14 @@ export class UploadStateContainer extends Component {
 
   render() {
     return (
-      <div className='d-block'>
-        <div
-          className='upload-container p-4'
-          style={
-            { background: 'rgb(27,28,43)' },
-            { background: `linear-gradient(35deg, rgba(27,28,43,1) 0%, rgba(27,28,43,1) 80%, rgba(${this.state.gradientColor}, 0.5) 100%)` }
-          }
-        >
-          {this.state.current}
-        </div>
+      <div
+        className='upload-container w-100 h-100 d-flex align-items-center justify-content-center'
+        style={
+          { background: 'rgb(27,28,43)' },
+          { background: `linear-gradient(35deg, rgba(27,28,43,1) 0%, rgba(27,28,43,1) 80%, rgba(${this.state.gradientColor}, 0.5) 100%)` }
+        }
+      >
+        {this.state.current}
       </div>
     );
   }
