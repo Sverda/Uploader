@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Uploader.Database;
 
 namespace Web.Controllers
 {
@@ -15,9 +16,11 @@ namespace Web.Controllers
     public class UploadController : ControllerBase
     {
         private readonly ILogger<UploadController> _logger;
+        private readonly Context _context;
 
-        public UploadController(ILogger<UploadController> logger)
+        public UploadController(ILogger<UploadController> logger, Context context)
         {
+            _context = context;
             _logger = logger;
         }
 

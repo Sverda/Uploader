@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Uploader.Database;
 
 namespace Web
 {
@@ -20,7 +22,10 @@ namespace Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllers();
+
+            services.AddDbContext<Context>(
+                    options => options.UseSqlServer(Configuration["UploaderSecrets:ConnectionString"]));
 
             services.AddSwaggerGen();
 
