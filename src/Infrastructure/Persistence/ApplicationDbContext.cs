@@ -1,6 +1,7 @@
 using Uploader.Application.Common.Interfaces;
 using Uploader.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Uploader.Infrastructure.Persistence.Configuration;
 
 namespace Uploader.Infrastructure.Persistence
 {
@@ -15,11 +16,8 @@ namespace Uploader.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //TODO: Move configuration to separate file (per type)
-            modelBuilder
-                .Entity<UploadedFile>()
-                .Property(b => b.Name)
-                .IsRequired();
+            new UploadedFileEntityTypeConfiguration()
+                .Configure(modelBuilder.Entity<UploadedFile>());
         }
     }
 }
