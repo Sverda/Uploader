@@ -5,9 +5,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Uploader.Database;
 
-namespace Web.Database.Migrations
+namespace Uploader.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(Context))]
     [Migration("20210204183718_Initial")]
