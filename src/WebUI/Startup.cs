@@ -1,3 +1,4 @@
+using Uploader.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,9 +23,7 @@ namespace Web
         {
             services.AddControllers();
 
-            //TODO: Repository pattern
-            services.AddDbContext<Context>(
-                    options => options.UseSqlServer(Configuration["UploaderSecrets:ConnectionString"]));
+            services.AddInfrastructure(Configuration);
 
             services.AddSwaggerGen();
 

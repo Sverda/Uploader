@@ -1,13 +1,14 @@
-using Microsoft.EntityFrameworkCore;
+using Uploader.Application.Common.Interfaces;
 using Uploader.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Uploader.Infrastructure.Persistence
 {
-    public class Context : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public DbSet<UploadedFile> Files { get; set; }
 
-        public Context(DbContextOptions<Context> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
         }

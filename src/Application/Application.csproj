@@ -4,8 +4,14 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Uploader.Application</RootNamespace>
+    <AssemblyName>Uploader.Application</AssemblyName>
   </PropertyGroup>
 
 </Project>

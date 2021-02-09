@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Uploader.Infrastructure.Persistence.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20210204183718_Initial")]
     partial class Initial
     {

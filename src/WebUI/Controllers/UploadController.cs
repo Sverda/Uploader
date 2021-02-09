@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Uploader.Database;
+using Uploader.Application.Common.Interfaces;
 
 namespace Web.Controllers
 {
@@ -16,9 +13,9 @@ namespace Web.Controllers
     public class UploadController : ControllerBase
     {
         private readonly ILogger<UploadController> _logger;
-        private readonly Context _context;
+        private readonly IApplicationDbContext _context;
 
-        public UploadController(ILogger<UploadController> logger, Context context)
+        public UploadController(ILogger<UploadController> logger, IApplicationDbContext context)
         {
             _context = context;
             _logger = logger;
