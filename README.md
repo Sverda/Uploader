@@ -22,3 +22,9 @@ Run application (you have to be in *src/WebUI*).
 ![in-progress](docs/images/progress.jpg)
 ![error](docs/images/error.jpg)
 ![success](docs/images/success.jpg)
+
+## TODO
+- [ ] Cancel files uploading
+- [ ] Retry in case of error
+- [ ] Copy link feature
+- [ ] Allow running app with in memory database
